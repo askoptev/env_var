@@ -1,0 +1,16 @@
+[Unit]
+Description=Env Test
+After=multi-user.target
+
+[Service]
+User=ice
+Group=www-data
+Type=simple
+Restart=always
+EnvironmentFile=-/etc/systemd/env_test.conf
+WorkingDirectory=/home/ice/dev/env_test
+ExecStart=/home/ice/dev/env_test/env/bin/python3 /home/ice/dev/env_test/main.py
+
+[Install]
+WantedBy=multi-user.target
+
