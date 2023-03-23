@@ -1,0 +1,16 @@
+[Unit]
+Description=env_var
+After=multi-user.target
+
+[Service]
+User=ice
+Group=www-data
+Type=simple
+Restart=always
+EnvironmentFile=-/etc/systemd/env_var.conf
+WorkingDirectory=/home/ice/github/env_var
+ExecStart=/home/ice/github/env_var/env/bin/python3 /home/ice/github/env_var/main.py
+
+[Install]
+WantedBy=multi-user.target
+

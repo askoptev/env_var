@@ -1,9 +1,9 @@
 """
     Модуль запускается из демона: 
-    /etc/systemd/system/env_test.service
+    /etc/systemd/system/env_var.service
 
     Демон загружает переменные окружения из фала конфигурации:
-    /etc/systemd/env_test.conf
+    /etc/systemd/env_var.conf
 
     Если переменная загрузилать, то в файл env.txt 
     будет сохраняться ее значение "SUCCESSFUL"
